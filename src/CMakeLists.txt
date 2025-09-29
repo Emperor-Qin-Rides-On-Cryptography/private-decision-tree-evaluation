@@ -5,7 +5,7 @@ project (main VERSION 1.0)
 set(CMAKE_TOOLCHAIN_FILE ${CMAKE_CURRENT_SOURCE_DIR}/vcpkg/scripts/buildsystems/vcpkg.cmake
   CACHE STRING "Vcpkg toolchain file")
 
-find_package(SEAL)
+find_package(SEAL 4.0 REQUIRED)
 find_package(OpenMP)
 
 add_executable(main pdte.cpp server.cpp client.cpp utils.cpp tree_utils.cpp parser.cpp)

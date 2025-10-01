@@ -6,7 +6,7 @@ set(CMAKE_TOOLCHAIN_FILE ${CMAKE_CURRENT_SOURCE_DIR}/vcpkg/scripts/buildsystems/
   CACHE STRING "Vcpkg toolchain file")
 
 find_package(OpenMP)
-find_package(SEAL)
+find_package(SEAL 4.0 REQUIRED)
 add_executable(main main.cpp server.cpp client.cpp utils.cpp parser.cpp)
 
 target_link_libraries(main SEAL::seal OpenMP::OpenMP_CXX)

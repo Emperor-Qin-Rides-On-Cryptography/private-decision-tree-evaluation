@@ -102,7 +102,7 @@ def generate_balanced_tree_rec(max_depth, bitlength, num_attributes, seed=None):
 
     return t    
 
-WORKSPACE_DIR='/home/r5akhava/private-decision-tree-evaluation/experiments'
+WORKSPACE_DIR='/mnt/data/zjy/CryptoCompetition/private-decision-tree-evaluation/experiments'
 
 if __name__ == '__main__':
 

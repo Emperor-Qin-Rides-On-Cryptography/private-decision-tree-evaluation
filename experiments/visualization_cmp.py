@@ -100,26 +100,26 @@ ax.plot(11, 0.4, "o", label="SortingHats")
 axins.plot(11, 0.4, "o")
 
 
-# Ilia et al.
-avg_times = []
-
-# Open and read the file
-filename='results-v9/ilia/case1.txt'
-with open(filename, 'r') as file:
-    lines = file.readlines()
-
-    # Iterate over the lines
-    for line in lines:
-        # If the line contains 'Avg. time per integer'
-        if "Avg. time per integer" in line:
-            # Extract the value and append to the list
-            value = float(line.split(':')[1].split('ms')[0].strip())
-            avg_times.append(value)
-
-# Calculate and return the average
-ilia = sum(avg_times) / len(avg_times)
-ax.plot(64, ilia, "o", label="Iliashenko et al.")
-axins.plot(64, ilia, "o")
+# # Ilia et al.
+# avg_times = []
+#
+# # Open and read the file
+# filename='results-v9/ilia/case1.txt'
+# with open(filename, 'r') as file:
+#     lines = file.readlines()
+#
+#     # Iterate over the lines
+#     for line in lines:
+#         # If the line contains 'Avg. time per integer'
+#         if "Avg. time per integer" in line:
+#             # Extract the value and append to the list
+#             value = float(line.split(':')[1].split('ms')[0].strip())
+#             avg_times.append(value)
+#
+# # Calculate and return the average
+# ilia = sum(avg_times) / len(avg_times)
+# ax.plot(64, ilia, "o", label="Iliashenko et al.")
+# axins.plot(64, ilia, "o")
 
 #put the legend top left
 ax.legend(loc='upper left')

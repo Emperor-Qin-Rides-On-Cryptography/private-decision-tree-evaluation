@@ -157,8 +157,8 @@ with open(os.path.join(PROJECT_ROOT,'experiments/experiment.yaml')) as f:
 
         # SortingHats
 
-        raw_data_sortinghats=read_sortinghats(os.path.join(PROJECT_ROOT, results_path, 'sortinghats', dataset_name))
-        
+        #raw_data_sortinghats=read_sortinghats(os.path.join(PROJECT_ROOT, results_path, 'sortinghats', dataset_name))
+        raw_data_sortinghats=None
         if raw_data_sortinghats is not None:
             # Add approximated communication
             raw_data_sortinghats['comm'] = raw_data_sortinghats['dataset'].apply(lambda x: num_attributes[x])*64*2048*2/8000

@@ -65,9 +65,9 @@ with open(os.path.join(PROJECT_ROOT,'experiments/experiment.yaml')) as f:
                     )
                     if "CORRECT" in res.stdout.decode("utf-8"):
                         pass
-                        # print("PASS")
+                        print("PASS")
                     else:
-                        # print("FAIL", cmd)
+                        print("FAIL", cmd)
                         with open(os.path.join(PROJECT_ROOT, f"experiments/results-{version_tag}/fail-src1.txt"), "a") as log_file:
                             log_file.write(cmd+"\n")
                     with open(os.path.join(PROJECT_ROOT, f"experiments/results-{version_tag}/log-src1.txt"), "a") as log_file:
